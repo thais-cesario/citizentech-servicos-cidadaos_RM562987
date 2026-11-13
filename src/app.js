@@ -14,17 +14,35 @@ function filtrarServicos(lista, termo) {
 
 function renderizar(lista) {
   const el = document.getElementById("lista");
+  el.textContent = "";
+
   if (lista.length === 0) {
-    el.innerHTML = "<p>Nenhum serviço encontrado.</p>";
+    const vazio = document.createElement("p");
+    vazio.textContent = "Nenhum serviço encontrado.";
+    el.appendChild(vazio);
     return;
   }
-  el.innerHTML = lista.map(s => `
-    <article class="card">
-      <h2>${s.nome}</h2>
-      <span class="tag">${s.categoria}</span>
-      <p>Horário: ${s.horario}</p>
-      <p>Contato: ${s.contato}</p>
-    </article>`).join("");
+
+  lista.forEach(s => {
+    const card = document.createElement("article");
+    card.className = "card";
+
+    const titulo = document.createElement("h2");
+    titulo.textContent = s.nome;
+
+    const tag = document.createElement("span");
+    tag.className = "tag";
+    tag.textContent = s.categoria;
+
+    const horario = document.createElement("p");
+    horario.textContent = "Horário: " + s.horario;
+
+    const contato = document.createElement("p");
+    contato.textContent = "Contato: " + s.contato;
+
+    card.append(titulo, tag, horario, contato);
+    el.appendChild(card);
+  });
 }
 
 if (typeof document !== "undefined") {
