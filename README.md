@@ -18,4 +18,5 @@ O documento contempla:
 8. Comparativo do site antes e depois das alterações.
 9. Execução do Actions após atualização do site.
 
-**Acessar documento completo de evidências (docs/evidencias/evidencias-entrega.docx)**
+
+**[📄 Acessar documento completo de evidências](docs/evidencias/evidencias-entrega.docx)**
