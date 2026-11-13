@@ -1,0 +1,10 @@
+{
+  "name": "citizentech-servicos-cidadaos",
+  "version": "1.0.0",
+  "description": "Diretório digital de serviços públicos - CitizenTech",
+  "scripts": {
+    "test": "node --test",
+    "build": "node build.js"
+  },
+  "license": "MIT"
+}
